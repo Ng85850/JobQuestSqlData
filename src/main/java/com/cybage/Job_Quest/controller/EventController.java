@@ -23,22 +23,7 @@ public class EventController {
 	@Autowired
 	private EventService eventService;
 
-//	@RequestMapping(value = "/eventFormController")
-//	public ModelAndView appliedJob(HttpServletRequest request, HttpServletResponse response, Model model)
-//			throws IOException {
-//		Event event = new Event();
-//
-//		model.addAttribute("eventinfo", event);
-//		return new ModelAndView("eventForm");
-//	}
-//
-//	@RequestMapping(value = "/EventRegistrationServlet")
-//	public ModelAndView hkuhuih(@ModelAttribute("eventinfo") Event event) {
-//		eventService.saveEvents(event);
-//
-//		return new ModelAndView("home");
-//
-//	}
+
 
 	@RequestMapping(value = "/EventsAddButton")
 	public ModelAndView addEventsToSql() {
