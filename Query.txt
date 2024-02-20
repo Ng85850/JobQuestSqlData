@@ -1,0 +1,62 @@
+CREATE TABLE eventinfo (
+    eventId INT AUTO_INCREMENT PRIMARY KEY,
+    eventName VARCHAR(255),
+    posterImage VARCHAR(255),
+    bannerImage VARCHAR(255),
+    organizerName VARCHAR(255),
+    tech VARCHAR(255),
+    dateTime VARCHAR(255),
+    noOfRegistration INT,
+    aboutContest TEXT,
+    rulesToFollow TEXT,
+    rewards TEXT,
+    aboutQrganizer TEXT,
+    rating DOUBLE,
+    contactDetails VARCHAR(255),
+    founder VARCHAR(255),
+    companySize VARCHAR(255),
+    industryType VARCHAR(255)
+);
+
+CREATE TABLE compInfo (
+    compId INT AUTO_INCREMENT PRIMARY KEY,
+    compName VARCHAR(255),
+    compDesc LONGTEXT,
+    tag1 VARCHAR(255),
+    tag2 VARCHAR(255),
+    tag3 VARCHAR(255),
+    tag4 VARCHAR(255),
+    compVideoUrl VARCHAR(255),
+    compTagLine VARCHAR(255),
+    compWebsiteUrl VARCHAR(255),
+    foundedAt VARCHAR(255),
+    compType VARCHAR(255),
+    compHeadquaters VARCHAR(255),
+    compRating DOUBLE,
+    noOfFollower VARCHAR(255),
+    compBannerImg VARCHAR(255),
+    compPosterImg VARCHAR(255)
+);
+
+CREATE TABLE jobDetails (
+    jobId INT AUTO_INCREMENT PRIMARY KEY,
+    JobName VARCHAR(255),
+    expReq VARCHAR(255),
+    location VARCHAR(255),
+    postedAgo VARCHAR(255),
+    noOfApplicant INT,
+    jobDesc LONGTEXT,
+    role VARCHAR(255),
+    industryType VARCHAR(255),
+    department VARCHAR(255),
+    empType VARCHAR(255),
+    roleCategory VARCHAR(255),
+    education VARCHAR(255),
+    keySkills VARCHAR(255),
+    salRangeMin FLOAT,
+    salRangeMax FLOAT,
+    workMode VARCHAR(255),
+    compType VARCHAR(255),
+    compId INT,
+    FOREIGN KEY (compId) REFERENCES compInfo(compId)
+);
