@@ -1,0 +1,24 @@
+package com.cybage.Job_Quest.controller;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+
+public class SingleJobDescController {
+
+	@request(value="/SingleJob")
+	public ModelAndView test(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		return new ModelAndView("SingleJob");
+	}
+	
+	
+	(value="/Profile")
+	public ModelAndView Profile(HttpServletRequest request,HttpServletResponse response) throws IOException{
+		
+		
+		return new ModelAndView("Proflie");
+	}
+}

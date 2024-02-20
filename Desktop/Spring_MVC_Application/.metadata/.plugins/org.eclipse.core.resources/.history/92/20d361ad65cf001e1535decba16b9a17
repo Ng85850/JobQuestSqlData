@@ -1,0 +1,97 @@
+package com.cybage.Job_Quest.controller;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cybage.Job_Quest.Service.JobDetailsService;
+import com.cybage.Job_Quest.model.JobDetail;
+
+@Controller
+public class JobDetailController {
+
+	@Autowired
+	private JobDetailsService jobDetailsService;
+
+//	@RequestMapping(value = "/JobDetailsController")
+//	public ModelAndView appliedJob(HttpServletRequest request, HttpServletResponse response, Model model)
+//			throws IOException {
+//		JobDetail jobDetail = new JobDetail();
+//
+//		model.addAttribute("jobDetailinfo", jobDetail);
+//		return new ModelAndView("JobDetailsForm");
+//	}
+//
+//	@RequestMapping(value = "/processJobForm")
+//	public ModelAndView hkuhuih(@ModelAttribute("jobDetailinfo")JobDetail jobDetail) {
+//		jobDetailsService.saveJobDetails(jobDetail);		
+//		return new ModelAndView("home");
+//		
+//	}
+
+	@RequestMapping(value = "/JOBAddButton")
+	public ModelAndView addJobs() {
+
+		JobDetail jobDetail1 = new JobDetail("Store Manager", "4 to 8",
+				"Thane,Maharashtra, Pune,Maharashtra, Mumbai (All Areas)", "2 days ago", 37,
+				"Title: Store Manager-Retail-Exp(4-8 years)-MaharashtraReporting to: Area Operations ManagerSkip Level: City/Zonal Manager Location: Mumbai,Pune,Thane",
+				"Territory Sales Manager", "Film / Music / Entertainment", "Sales & Business Development",
+				"Full Time, Permanent", "Retail & B2C Sales", "Any Graduate",
+				"Revenue Generation, Leadership, Customer Satisfaction", 4, 5, "WFO", "Remote", 8);
+
+		JobDetail jobDetail2 = new JobDetail("Customer Care Executive", "0 to 5", "Delhi/NCR", "2 days ago", 665,
+				"Founded in 2010, By an ex-Microsoft 'techie' with no money but truckloads of relentless passion to make a difference in this world, Lenskart is one of the fastest growing eyewear businesses today.Peyush along with his two co-founders Amit Chaudhary and Sumeet Kapahi founded 'VALYOO technologies'. The aim was to truly add 'valyoo' in customers' lives by eliminating the retailers, setting up our own high quality manufacturing and supplying directly to the consumer. With this, they not only cut costs, but also delivered high quality standards, supported with in house robotic lens manufacturing and assembly ensuring 100% precision and top quality control.With a rapidly growing business reaching out to over 1,00,000 customers a month via a unique combination of a strong online business and uniquely designed physical stores, Lenskart is revolutionizing the eyewear industry.With a rapidly growing business reaching out to over 1,00,000 customers a month via a unique combination of a strong online business and uniquely designed physical stores, Lenskart is revolutionizing the eyewear industry.",
+				"Customer Retention - Voice / Blended", "BPO / Call Centre", "Customer Success, Service & Operations",
+				"Full Time, Permanent", "Voice / Blended", "Any Graduate",
+				"Inbound Process, Customer Service, Voice Process, Customer Complaints, Customer Queries", 3, 4, "WFO",
+				"MNC", 8);
+
+		JobDetail jobDetail3 = new JobDetail("SDE", "3 to 6",
+				"Hyderabad/Secunderabad, Gurgaon/Gurugram, Bangalore/Bengaluru", "30+ days ago", 77,
+				"Translation of complex functional requirements into technical requirements, implementing and maintaining a coherent and progressive development strategy for our product line Design, develop and maintain complex systems using best of the breed development practices and technology.Responsible for the over-all software development life cycle. Delivery of High Quality, Scalable and Extensible systems and applications on-time and on-budget.Adoption and Evolution of the software engineering practices and tools within the organization Keep in sync with the latest technology developments and open source offerings. Evaluate and adopt them for solving business problem of organization.",
+				"Back End Developer", "Internet", "Engineering - Software & QA", "Full Time, Permanent",
+				"Software Development", "Any Graduate", "Software design, SOA, Database design, MySQL, Debugging", 10,
+				15, "Hybrid", "HR", 8);
+
+		JobDetail jobDetail4 = new JobDetail("Business Development", " 2 to 5",
+				"Srinagar, Kolkata, Mumbai, Vijayawada, Visakhapatnam, Dehradun, Hyderabad/Secunderabad, Haldwani, Pune, Agra, Coimbatore, Bangalore/Bengaluru",
+				"30+ days ago", 682,
+				"Responsible for identifying suitable commercial retail properties for opening new Lenskart stores intheir respective region.Retail property search management, coordinating with key partners like property developers,landlords, project consultants, property brokers.Location Catchment Analysis of New Store Locations Negotiating, acquiring and finalizing new properties. Negotiating final rentals, Landlord Scope of Works etc.Liaising legal due diligence and paperwork involved in signing acquiring.Coordination with various department internally till store launch.Develop and maintain a pipeline of growth opportunities, both organic growth and acquisitions.",
+				": Real Estate Consultant / Agent", "Internet", "Sales & Business Development", "Full Time, Permanent", "", null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+//				JobDetail jobDetail2 = new JobDetail(null, null, null, null, 0, null, null, null, null, null, null, null, null, 0, 0, null, null, 0);
+
+		return new ModelAndView("home");
+
+	}
+
+}

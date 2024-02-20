@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/allJobList.css" />
+</head>
+<body>
+	<nav>Navigation Bar</nav>
+
+	<div class="container">
+			</div>
+
+	<script src="../js/all_Job_List.js"></script>
+	<footer>Footer</footer>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/allJobList.js"></script>
+</body>
+</html>

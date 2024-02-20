@@ -1,0 +1,6 @@
+package com.cybage.Job_Quest.repository;
+
+
+public class EventRepoositoryImpl implements EventRepoository{
+
+}

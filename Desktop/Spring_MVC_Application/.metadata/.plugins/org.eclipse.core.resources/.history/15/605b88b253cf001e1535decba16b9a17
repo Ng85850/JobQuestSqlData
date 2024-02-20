@@ -1,0 +1,53 @@
+package com.cybage.Job_Quest.controller;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cybage.Job_Quest.Service.CompanyService;
+import com.cybage.Job_Quest.Service.EventService;
+import com.cybage.Job_Quest.model.Company;
+import com.cybage.Job_Quest.model.Event;
+
+@Controller
+public class CompanyController {
+	@Autowired
+	private CompanyService companyService;
+
+//	@RequestMapping(value = "/companyDetailController")
+//	public ModelAndView appliedJob(HttpServletRequest request, HttpServletResponse response, Model model)
+//			throws IOException {
+//		Company company = new Company();
+//
+//		model.addAttribute("companyinfo", company);
+//		return new ModelAndView("companyForm");
+//	}
+//
+//	@RequestMapping(value = "/CompanyRegistrationServlet")
+//	public ModelAndView hkuhuih(@ModelAttribute("companyinfo") Company company) {
+//		companyService.saveCompany(company);
+//
+//		return new ModelAndView("home");
+//
+//	}
+
+	@RequestMapping(value = "/CompanyAddButton")
+	public ModelAndView addCompanyToSql() {
+
+		Company company1 = new Company("Lenskart",
+				"Founded in 2010, By an ex-Microsoft 'techie' with no money but truckloads of relentless passion to make a difference in this world, Lenskart is India's fastest-growing eyewear business today.With a rapidly growing business reaching out to over 1,00,000 customers a month via a unique combination of a strong online business as www.lenskart.com, uniquely designed physical stores, as well as a first-of-its-kind home eye check up' service, Lenskart is revolutionizing the eyewear industry in India.",
+				"Internet", "B2B", "Unicorn", "B2C", "https://www.youtube.com/watch?v=Rid7mX9vrNg&t=1s", "Do More. Be More.", "https://www.lenskart.com/", "2010 (14 yrs old)", "Private", "Faridabad, India", 3.3, "42.9", "lenskart_banner.jpg", "lenskart_Poster.gif");
+
+		return new ModelAndView("home");
+
+	}
+
+}

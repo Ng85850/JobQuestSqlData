@@ -1,0 +1,17 @@
+package com.cybage.Job_Quest.repository;
+
+import javax.persistence.PersistenceContext;
+
+import com.cybage.Job_Quest.model.Event;
+
+public class EventRepoositoryImpl implements EventRepoository{
+
+	@Override
+	public void saveEvents(Event event) {
+		
+		@PersistenceContext
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.cybage.Job_Quest.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="jobDetails")
+public class JobDetail {
+
+	@
+	
+}

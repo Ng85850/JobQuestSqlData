@@ -1,0 +1,73 @@
+package com.cybage.Job_Quest.controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cybage.Job_Quest.Service.EventService;
+import com.cybage.Job_Quest.model.Event;
+
+@Controller
+public class EventController {
+
+	@Autowired
+	private EventService eventService;
+
+	@RequestMapping(value = "/eventFormController")
+	public ModelAndView appliedJob(HttpServletRequest request, HttpServletResponse response, Model model)
+			throws IOException {
+		Event event = new Event();
+
+		model.addAttribute("eventinfo", event);
+		return new ModelAndView("eventForm");
+	}
+
+	@RequestMapping(value = "/EventRegistrationServlet")
+	public ModelAndView hkuhuih(@ModelAttribute("eventinfo") Event event) {
+		eventService.saveEvents(event);
+
+		return new ModelAndView("home");
+
+	}
+
+	@RequestMapping(value = "/EventsAddButton")
+	public ModelAndView addEventsToSql() {
+
+		Event event1 = new Event("#DS Code Quest ", null , "3D_Quest_Banner.jpg", "Dassault", "JS", "6 Feb, 12:00", 462,
+				"You have dreams? You enjoy a challenge? Here at Dassault Systèmes, we empower people and energize passion to change the world and create the future. Let’s open new horizons together with the power of 3DEXPERIENCE virtual universes!Give power to your passion! Find the job you love at 3DS! Shape your career with 3DS!",
+				"You need to attempt and submit the contest within 90 minutes.In the case of any code plagiarism, both the contestants will be disqualified from the contest.Dassault Systemes decision will be final.",
+				"Title: ENOVA Application Developer (JavaScript)In our ENOVIA India organization, we are looking for a strongly motivated Application Developer who will have a fundamental role in enabling business and industry innovators to collaboratively build and execute a successful plan, transforming market opportunities into marketplace advantages. You will work closely with the Product Development Managers taking an active role in defining specifications, software architecture and design. You will also collaborate with stakeholders to resolve dependencies, breakdown work, develop and contribute to functional and performance tests. ENOVIA is the World's leading solution for product development and social Collaboration. It is used by leading organizations in multiple industries to develop the products we see and use in our everyday lives.",
+				"Our business is innovation. Thanks to the 3DEXPERIENCE platform, we provide software solutions that allow customers to create innovative new products and services using virtual experiences. Our aim is to build a new development model to address the major challenges facing the world today. We have 290,000 customers and 25 million users across 11 industries worldwide. Our customers range from major accounts to startups and governments, as well as individual users. We provide solutions for all sectors of the economy, from mass retail to high-tech.",
+				4.1, "8047106630", "1981 (43 yrs old)", "10001-50000", "Software Product");
+//		Event event2 = new Event();
+//		Event event3 = new Event();
+//		Event event4 = new Event();
+//		Event event5 = new Event();
+//		Event event6 = new Event();
+//		Event event7 = new Event();
+//		Event event8 = new Event();
+//		Event event9 = new Event();
+//		Event event10 = new Event();
+
+		List<Event> eventList = new ArrayList<>();
+		eventList.add(event1);
+		
+		for(Event eve: eventList) {
+			eventService.saveEvents(eve);
+		}
+
+		return new ModelAndView("home");
+
+	}
+
+}

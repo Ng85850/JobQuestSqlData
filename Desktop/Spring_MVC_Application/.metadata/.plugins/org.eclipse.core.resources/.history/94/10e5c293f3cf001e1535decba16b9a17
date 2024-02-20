@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/allJobList.css" />
+</head>
+<body>
+	<nav>Navigation Bar</nav>
+
+	<div class="container">
+	<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<%-- Sample dynamic data (replace this with your actual dynamic data) --%>
+<%
+    List<Job> jobList = new ArrayList<>();
+
+    jobList.add(new Job("Probationary Officers Programme( For PAN India)", "ICICI Bank", "4.0 | 335223 Review", "0-5 Yrs", "Rs 4000000", "Temp. WFH - Mumbai", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi error", "Market Research"));
+    // Add more jobs as needed
+%>
+
+<html>
+<head>
+    <title>Dynamic Job Listings</title>
+    <!-- Add your CSS links here -->
+</head>
+<body>
+
+<div id="Job-list" class="main-container">
+    <% for (Job job : jobList) { %>
+        <div class="Jobs">
+            <div class="Job-and-company-image-and-name">
+                <div class="Job-and-company-name">
+                    <h3 class="Job-name"><%= job.getJobName() %></h3>
+                    <div class="Job-basic-details">
+                        <h5><%= job.getCompanyName() %></h5>
+                        <div class="rating">
+                            <label></label>
+                        </div>
+                        <h6 class="Review"><%= job.getReview() %></h6>
+                    </div>
+                </div>
+                <!-- Add more code for company images here -->
+            </div>
+            <!-- Add more code for job details here -->
+            <div class="Job-details">
+                <img src="<%= pageContext.request.contextPath %>/resources/asset/suitcase.png" alt="NA" class="location" />
+                <div class="year-exp">
+                    <p class="details"><%= job.getExperience() %></p>
+                </div>
+                <div><p>|</p></div>
+                <div class="salary"><p><%= job.getSalary() %></p></div>
+                <!-- Add more code for location details here -->
+            </div>
+            <!-- Add more code for short job description here -->
+            <div class="short-job-desc">
+                <img src="<%= pageContext.request.contextPath %>/resources/asset/page.png" alt="NA" class="location" />
+                <div class="job-desc"><%= job.getJobDescription() %></div>
+            </div>
+            <!-- Add more code for tags and buttons here -->
+            <div class="tags">
+                <p class="Job-tag"><%= job.getJobTag() %></p>
+                <div><p>|</p></div>
+                <!-- Add more tags as needed -->
+            </div>
+            <div class="button">
+                <button class="save-button" onclick="toggleBookmark(this)">
+                    <svg class="bookmark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path class="bookmark-path" d="M19 2H5c-1.1 0-1.99.9-1.99 2L3 21l8-5 8 5V4c0-1.1-.9-2-2-2" />
+                    </svg>
+                    Save
+                </button>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<!-- Add your JavaScript and other scripts here -->
+
+</body>
+</html>
+	
+	</div>
+
+	<script src="../js/all_Job_List.js"></script>
+	<footer>Footer</footer>
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/allJobList.js"></script>
+</body>
+</html>

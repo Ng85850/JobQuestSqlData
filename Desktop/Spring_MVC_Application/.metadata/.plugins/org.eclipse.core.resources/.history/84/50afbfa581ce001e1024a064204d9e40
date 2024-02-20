@@ -1,0 +1,20 @@
+package com.cybage.Job_Quest.repository;
+
+import org.springframework.stereotype.Repository;
+
+import com.cybage.Job_Quest.model.Company;
+
+@Repository
+public class CompanyRepositoryImpl implements CompanyRepository{
+
+	@P
+	
+	@Override
+	public void saveCompany(Company company) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+}

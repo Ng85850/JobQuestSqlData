@@ -1,0 +1,489 @@
+@charset "ISO-8859-1";
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f4fa;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+
+#custom-layout {
+  display: flex;
+}
+
+.custom-middle {
+  flex: 0.7;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.custom-right {
+  flex: 0.3;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.custom-right-sub {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(77, 76, 76, 0.2);
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#custom-right-sub{
+    margin-top: 0;
+}
+.custom-middle-sub {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.company-name {
+  color: rgb(81, 81, 81);
+}
+
+.company-logo {
+  height: 55px;
+  width: auto;
+  border-radius: 20px;
+}
+
+.company-name-logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location {
+  width: 16px;
+  height: 16px;
+}
+
+.location,
+.Job-tag {
+  padding: 0 8px;
+}
+
+.border {
+  border: none;
+  height: 2px;
+  background-color: #d3d2d4;
+}
+
+.info-about-job {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.posted,
+.opening,
+.applicant,
+.review-by-and-time,
+.reported-benefit,
+.benefit-name,
+.service-name,
+.service-desc-more {
+  color: rgb(157, 156, 156);
+}
+
+/* CSS */
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border: 2px solid rgb(71, 71, 191);
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: rgb(71, 71, 191);
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 35px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+#Login-to-apply {
+  background-color: rgb(71, 71, 191);
+  color: #fff;
+}
+
+.button-17:hover {
+  background: #f6f9fe;
+  color: #174ea6;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.opening-class {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-role,
+.about-industry,
+.about-department,
+.about-Employment,
+.about-role-category,
+.about-UG,
+.about-key-skills,
+.about-company-role {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.Job-description,
+.required-candidate-profile,
+.role,
+.Industry,
+.department,
+.employment,
+.role-category,
+.education,
+.UG,
+.key-skills,
+.about-company,
+.company-role,
+.address,
+.imposter,
+.job-name-of-intrested-job,
+.company-name-of-intrested-comp,
+.Review,
+.right-container-headings,
+.review-by-and-time,
+.paragraph,
+.Likes-of-intrested-job,
+.reported-benefit,
+.benefit-name,
+.service-name,
+.service-desc,
+.service-desc-more {
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+}
+
+.hr-email,
+.required-candidate-profile-details,
+.role-details,
+.Industry-details,
+.department-details,
+.employment-details,
+.role-category-details,
+.UG-details,
+.key-skills-details,
+.about-company-details,
+.company-role-details,
+.imposter-details,
+.comment {
+  color: rgb(45, 44, 44);
+  font-size: 12px;
+}
+
+.Job-description {
+  font-size: 15px;
+}
+
+/* CSS */
+.Infrastructure {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.Infrastructure:hover {
+  background: #f6f9fe;
+  color: #001941;
+}
+
+.Infrastructure:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%),
+    0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.Infrastructure:focus {
+  outline: none;
+  border: 2px solid #0b4aaf;
+}
+
+.Infrastructure:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.Infrastructure:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 2px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 6px 10px 4px;
+}
+
+.Infrastructure:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.Infrastructure:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 4px 4px 0,
+    rgba(60, 64, 67, 0.15) 0 8px 12px 6px;
+}
+
+.Infrastructure:disabled {
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
+    rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+.key-skills-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-media,
+.intrested-job-logo,
+.img-of-benefit {
+  width: 25px;
+  height: 25px;
+}
+
+.service-intrested-provider{
+    width: 100px;
+    height: 50px;
+}
+
+.social-media,
+.intrested-job-logo,
+.img-of-benefit {
+  padding: 0 5px;
+}
+
+.location-instrested-job {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.all-about-intrested-job {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Job-basic-details {
+  color: #020202;
+  display: flex;
+  align-items: center;
+  /* height: 30px; */
+}
+
+.Job-basic-details h5 {
+  margin-right: 10px;
+}
+
+.Job-basic-details .rating label {
+  color: gold;
+  font-size: 24px;
+  margin-right: 5px;
+  text-shadow: -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black,
+    1px 1px 1px black;
+}
+
+.rating label:before {
+  content: "\2605";
+}
+
+.location-ins {
+  width: 12px;
+  height: 12px;
+  padding: 0 8px;
+}
+
+.location-name {
+  font-size: small;
+}
+
+.view-all {
+  display: flex;
+  justify-content: center;
+}
+
+.review-and-read-all-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.read-all-review {
+  text-decoration: none;
+  color: #0b4aaf;
+  font-size: 12px;
+}
+
+.review-by-and-time,
+.reported-benefit,
+.benefit-name,
+.service-name    {
+  font-size: small;
+}
+
+.rating {
+  direction: rtl;
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  display: inline-block;
+  cursor: pointer;
+  color: #ccc; /* Initially colorless */
+  font-size: 24px;
+  margin-right: 10px;
+  transition: color 0.3s ease; /* Added transition */
+}
+
+.rating label:hover,
+.rating input[type="radio"]:hover ~ label {
+  color: #ffd700; /* Change color on hover */
+}
+
+.rating label:before {
+  content: "\2605";
+}
+
+.rating input[type="radio"]:checked ~ label:before {
+  color: #ffd700; /* Change color for selected stars */
+}
+
+.full-review-container{
+    padding: 2%;
+}
+
+.single-benefit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding: 10px;
+}
+
+.continer-of-benefit{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.benefit-name{
+    text-align: center;
+}
+
+.all-benefit{
+    padding: 10px;
+}

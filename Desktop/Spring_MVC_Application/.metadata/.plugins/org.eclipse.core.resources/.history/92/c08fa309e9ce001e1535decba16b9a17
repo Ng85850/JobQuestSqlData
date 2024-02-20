@@ -1,0 +1,6 @@
+package com.cybage.Job_Quest.repository;
+
+public interface JobDetailsRepository {
+
+	public void saveJobDetails()
+}

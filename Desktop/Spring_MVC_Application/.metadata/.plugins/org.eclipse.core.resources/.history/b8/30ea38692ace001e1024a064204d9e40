@@ -1,0 +1,7 @@
+package com.cybage.Job_Quest.Model;
+
+public class Job {
+    private String name;
+    private String companyName;
+    // Other properties and getters/setters
+}

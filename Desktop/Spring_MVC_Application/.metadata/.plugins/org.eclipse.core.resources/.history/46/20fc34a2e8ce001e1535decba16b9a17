@@ -1,0 +1,38 @@
+package com.cybage.Job_Quest.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="jobDetails")
+public class JobDetail {
+
+	@Id
+	@GeneratedValue(strategy =  GenerationType.AUTO)
+	private int jobId;
+	private String JobName;
+	private String expReq;
+	private String location;
+	private String postedAgo;
+	private int noOfApplicant;
+	private String jobDesc;
+	private String role;
+	private String industryType;
+	private String department;
+	private String empType;
+	private String roleCategory;
+	private String education;
+	private String keySkills;
+	private int salRangeMin;
+	private int salRangeMax;
+	private String workMode;
+	
+	
+	
+}

@@ -1,0 +1,15 @@
+package com.cybage.Job_Quest.repository;
+
+import com.cybage.Job_Quest.model.Company;
+
+public class CompanyRepositoryImpl implements CompanyRepository{
+
+	@Override
+	public void saveCompany(Company company) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+}

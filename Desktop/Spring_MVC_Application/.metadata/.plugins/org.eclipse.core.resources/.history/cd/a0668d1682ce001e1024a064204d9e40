@@ -1,0 +1,5 @@
+package com.cybage.Job_Quest.Service;
+
+public interface CompanyService {
+	public void saveC
+}

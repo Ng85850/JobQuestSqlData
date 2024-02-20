@@ -1,0 +1,9 @@
+package com.cybage.Job_Quest.repository;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class JobDetailsRepositoryImpl {
+
+	@Per
+}

@@ -1,0 +1,65 @@
+package com.cybage.Job_Quest.controller;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.cybage.Job_Quest.Service.EventService;
+import com.cybage.Job_Quest.model.Event;
+
+@Controller
+public class EventController {
+
+	@Autowired
+	private EventService eventService;
+
+	@RequestMapping(value = "/eventFormController")
+	public ModelAndView appliedJob(HttpServletRequest request, HttpServletResponse response, Model model ) throws IOException {
+		Event event =new Event();
+		
+		model.addAttribute("eventinfo",event);
+		return new ModelAndView("eventForm");}
+	
+
+	@RequestMapping(value = "/EventRegistrationServlet")
+	public ModelAndView hkuhuih(@ModelAttribute("eventinfo")Event event) {
+		eventService.saveEvents(event);
+		
+		return new ModelAndView("home");
+		
+	}
+	
+	@RequestMapping(value = "/EventsAddButton")
+	public ModelAndView addEventsToSql() {
+		
+		Event event1 = new Event("#DS Code Quest ", "", "3D_Quest_Banner.jpg", "Dassault", "JS", "6 Feb, 12:00", 462, "You have dreams? You enjoy a challenge? Here at Dassault Systèmes, we empower people and energize passion to change the world and create the future. Let’s open new horizons together with the power of 3DEXPERIENCE virtual universes!Give power to your passion! Find the job you love at 3DS! Shape your career with 3DS!", , null, null, 0, null, null, null, null);
+		Event event2 = new Event();
+		Event event3 = new Event();
+		Event event4 = new Event();
+		Event event5 = new Event();
+		Event event6 = new Event();
+		Event event7 = new Event();
+		Event event8 = new Event();
+		Event event9 = new Event();
+		Event event10 = new Event();
+		
+		List<Event> eventList = new ArrayList<>();
+		
+		
+		
+		return new ModelAndView("home");
+		
+	}
+	
+	
+}

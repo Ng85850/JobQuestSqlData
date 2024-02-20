@@ -1,0 +1,48 @@
+package com.cybage.Job_Quest.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Data
+@Entity
+@Table(name="EventInfo")
+public class Event {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int eventId;
+	private String eventName;
+	private String posterImage;
+	private String bannerImage;
+	private String organizerName;
+	private String tech;
+	private String dateTime;
+	private int noOfRegistration;
+	private String aboutContest;
+	private String rulesToFollow;
+	private String rewards;
+	private String aboutQrganizer;
+	private float rating;
+	private String contactDetails;
+	private String founder;
+	private int companySize;
+	private String industryType;
+	@Override
+	public String toString() {
+		return "Event [eventId=" + eventId + ", eventName=" + eventName + ", posterImage=" + posterImage
+				+ ", bannerImage=" + bannerImage + ", organizerName=" + organizerName + ", tech=" + tech + ", dateTime="
+				+ dateTime + ", noOfRegistration=" + noOfRegistration + ", aboutContest=" + aboutContest
+				+ ", rulesToFollow=" + rulesToFollow + ", rewards=" + rewards + ", aboutQrganizer=" + aboutQrganizer
+				+ ", rating=" + rating + ", contactDetails=" + contactDetails + ", founder=" + founder
+				+ ", companySize=" + companySize + ", industryType=" + industryType + "]";
+	}
+	
+	
+	
+	
+}
