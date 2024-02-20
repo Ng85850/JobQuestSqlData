@@ -1,6 +1,0 @@
-package com.cybage.Job_Quest.Service;
-
-public interface JobDetailsService {
-
-	public void 
-}

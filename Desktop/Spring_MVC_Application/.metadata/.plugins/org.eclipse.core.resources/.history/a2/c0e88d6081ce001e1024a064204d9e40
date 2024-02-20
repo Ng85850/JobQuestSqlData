@@ -1,8 +1,0 @@
-package com.cybage.Job_Quest.repository;
-
-import com.cybage.Job_Quest.model.Event;
-
-public interface EventRepoository {
-
-	public void saveEvents(Event event);
-}
